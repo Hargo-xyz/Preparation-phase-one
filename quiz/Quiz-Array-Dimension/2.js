@@ -21,8 +21,27 @@ RULES:
 
 function findNotRelative(arr1, arr2) {
     //code here
+    let result = []
+    let buang = []
+    for (let i = 0; i < arr1.length; i++) {
+        // let coba = arr1[i];
+        let ketemu = false;
+        for (let j = 0; j < arr2.length; j++) {
+            // let char = 
+            if (arr1[i] == arr2[j]) {
+                ketemu = true
+                // console.log(result)
+            }
+        }
+        if (!ketemu) {
+            result.push(arr1[i])
+        }
+    }
+    // console.log(result);
+
+    return result
 }
 
 console.log(findNotRelative([3, 6, 10, 12, 15], [1, 3, 5, 10, 16])); // [ 6, 12, 15]
 console.log(findNotRelative([10, 20, 36, 59], [5, 10, 15, 59])); //[20, 36]
-console.log(findNotRelative([1, 2, 3], [2, 1, 3])); //[]
+console.log(findNotRelative([1, 2, 3], [2, 1, 3])); //[] 
